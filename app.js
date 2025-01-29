@@ -12,4 +12,4 @@ const getWetherData = city => {
     try {
         const response = await fetch(url)
     }    
-})
+};
