@@ -7,10 +7,19 @@ body {
     background-color: #004E89;
 }
 
-.info {
+.search_section {
     width: 60%;
     height: 100vh;
     margin: 0 auto;
     padding: 5rem;
     background-color: rgb(25, 68, 104);
+}
+
+.weather {
+  visibility: hidden;
+}
+
+.details {
+  border: 2px solid red;
+  height: 20rem;
 }
