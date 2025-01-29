@@ -1,0 +1,16 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    background-color: #004E89;
+}
+
+.info {
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5rem;
+    background-color: rgb(25, 68, 104);
+}
