@@ -11,7 +11,7 @@ const feels_like = document.querySelector(".feels_like_temp");
 const pressure = document.querySelector(".pressure");
 const windSpeed = document.querySelector(".wind")
 const humidity = document.querySelector(".humidity");
-const current_image = document.querySelector(".icon")
+const current_image = document.querySelector(".icon");
 
 
 const loadConfig = async () => {
@@ -38,11 +38,14 @@ const showData = data => {
     if(data.current.weather[0].main === 'Clear') {
         document.body.style.backgroundImage = "url('./Assets/Images/sunny.jpeg')";
     } else if(data.current.weather[0].main === 'Rain') {
-        document.body.style.backgroundImage = "url('./Assets/Images/rainy.jpg')";
+        document.body.style.backgroundImage = "url('./Assets/Images/rain.jpg')";
     } else if(data.current.weather[0].main === 'Snow') {
         document.body.style.backgroundImage = "url('./Assets/Images/snowfall.jpg')";
     } else if(data.current.weather[0].main === 'Clouds') {
         document.body.style.backgroundImage = "url('./Assets/Images/cloudy.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    } else {
+        console.log("Impossible!");
     }
     current_temp.innerHTML = data.current.temp + "°C";
     feels_like.innerHTML = data.current.feels_like + "°C";
