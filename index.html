@@ -10,73 +10,44 @@
 </head>
 <body>
   <main class="container-fluid search_section text-center text-white">
-    <h1>How is the weather today?</h1>
+    <h1 class="mb-5">How is the weather today?</h1>
     <form class="col g-3 mt-5">
       <div class="col-lg-12">
-        <label for="city-name" class="form-label">Please enter city address</label>
+        <label for="city-name" class="form-label">Please enter the name of the city</label>
         <input type="text" class="form-control" id="city-name" placeholder="Enter the name of the city...">
       </div>
       <div class="d-grid gap-2">
         <button type="submit" class="btn btn-primary mt-5" id="search">Search</button>
       </div>
     </form>
-    <div class="container-fluid weather">
+    <div class="container-fluid weather text-center">
       <div class="container-fluid d-grid gap-3 text-center">
         <h1 class="temp"></h1>
+        <img src="#" class="icon" alt="">
         <h2 class="city"></h2>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-6 details">
-            <img src="#" alt="">
-              <div>
-                <p>Humidity</p>
-                <p class="humidity"></p>
-              </div>
+            <div>
+              <p>Humidity</p>
+              <p class="humidity"></p>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 details">
-            <img src="#" alt="">
-              <div>
-                <p>Wind Speed</p>
-                <p class="wind"></p>
-              </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 details"> 
+            <p>Wind Speed</p>
+            <p class="wind"></p>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-6 details">
-            <img src="#" alt="">
-              <div>
-                <p>Minim Temperature</p>
-                <p class="min_temp">--</p>
-              </div>
+            <p>Feels Like Temperature</p>
+            <p class="feels_like_temp"></p>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6 details">
-            <img src="#" alt="">
-              <div>
-                <p>Maximum Temperature</p>
-                <p class="max_temp">--</p>
-              </div>
+            <p>Pressure</p>
+            <p class="pressure"></p>
           </div>
         </div>
-          
       </div>
-      <!-- <img src="img/clear.png" alt="" class="weather-icon">
-        <h1 class="temp">--°C</h1>
-        <h2 class="city">--</h2>
-        <div class="details">
-            <div class="column">
-              <img src="img/humidity.png" alt="">
-              <div>
-                <p class="humidity">--</p>
-                <p>humidity</p>
-              </div>
-            </div>
-            <div class="column">
-              <img src="img/wind.png" alt="">
-              <div>
-                <p class="wind">--</p>
-                <p>Wind Speed</p>
-              </div>
-            </div>
-        </div> -->
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

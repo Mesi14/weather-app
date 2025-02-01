@@ -12,14 +12,43 @@ body {
     height: 100vh;
     margin: 0 auto;
     padding: 5rem;
-    background-color: rgb(25, 68, 104);
+    background-color: rgb(25, 68, 104, 0.9);
 }
 
 .weather {
+  margin-top: 5rem;
   visibility: hidden;
 }
 
 .details {
-  border: 2px solid red;
   height: 20rem;
+}
+
+.details p {
+  font-size: 2rem;
+}
+
+.icon {
+
+  margin: 0 auto;
+  background-color: #004E89;
+  border-radius: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(215, 220, 224, 0.35) 0px -2px 6px 0px inset; 
+}
+
+@media only screen and (max-width: 408px) {
+  .search_section {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+
+  .details {
+    height: 5rem;
+  }
+
+  .details p {
+    font-size: 1rem;
+  }
 }
