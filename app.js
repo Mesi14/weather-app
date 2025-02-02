@@ -2,7 +2,7 @@ let api_key = "";
 let urlDataRoot = "http://api.openweathermap.org/geo/1.0/direct?q=";
 let urlRoot = "https://api.openweathermap.org/data/3.0/onecall?lat=";
 const pageBody = document.querySelector('body');
-const city = document.getElementById("city-name");
+const city = document.querySelector("form-control");
 const searchBtn = document.getElementById("search");
 const info = document.querySelector(".weather");
 const current_temp = document.querySelector(".temp");
@@ -47,12 +47,12 @@ const showData = data => {
     } else {
         console.log("Impossible!");
     }
-    current_temp.innerHTML = data.current.temp + "°C";
-    feels_like.innerHTML = data.current.feels_like + "°C";
-    current_image.src = current_icon;
-    pressure.innerHTML = data.current.pressure + "hPa";
-    humidity.innerHTML = data.current.humidity + "%";
-    windSpeed.innerHTML = data.current.wind_speed + "km/h";
+    current_temp.innerHTML = `${data.current.temp} °C`;
+    feels_like.innerHTML = `${data.current.feels_like} °C`;
+    current_image.src = `${current_icon}`;
+    pressure.innerHTML = `${data.current.pressure} hPa`;
+    humidity.innerHTML = `${data.current.humidity} %`;
+    windSpeed.innerHTML = `${data.current.wind_speed} km/h`;
     info.style.visibility = "visible";
 }
 
