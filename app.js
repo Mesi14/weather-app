@@ -41,6 +41,7 @@ const showData = data => {
         Rain: "url('./Assets/Images/rain.jpg')",
         Snow: "url('./Assets/Images/snowfall.jpg')",
         Clouds: "url('./Assets/Images/cloudy.jpg')",
+        Mist: "url('./Assets/Images/mist.jpg')",
     };
     document.body.style.backgroundImage = backgroundImages[weatherCondition] || "none";
     document.body.style.backgroundSize = "cover";
