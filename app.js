@@ -1,8 +1,8 @@
 let api_key = "";
 let urlDataRoot = "http://api.openweathermap.org/geo/1.0/direct?q=";
 let urlRoot = "https://api.openweathermap.org/data/3.0/onecall?lat=";
-const pageBody = document.querySelector('body');
-const city = document.querySelector("form-control");
+const pageBody = document.getElementById('pageBody');
+const city = document.querySelector(".form-control");
 const searchBtn = document.getElementById("search");
 const info = document.querySelector(".weather");
 const current_temp = document.querySelector(".temp");
@@ -35,18 +35,15 @@ searchBtn.addEventListener("click", (e) => {
 const showData = data => {
     let icon = data.current.weather[0].icon;
     let current_icon = `https://openweathermap.org/img/wn/${icon}@2x.png`
-    if(data.current.weather[0].main === 'Clear') {
-        document.body.style.backgroundImage = "url('./Assets/Images/sunny.jpeg')";
-    } else if(data.current.weather[0].main === 'Rain') {
-        document.body.style.backgroundImage = "url('./Assets/Images/rain.jpg')";
-    } else if(data.current.weather[0].main === 'Snow') {
-        document.body.style.backgroundImage = "url('./Assets/Images/snowfall.jpg')";
-    } else if(data.current.weather[0].main === 'Clouds') {
-        document.body.style.backgroundImage = "url('./Assets/Images/cloudy.jpg')";
-        document.body.style.backgroundSize = 'cover';
-    } else {
-        console.log("Impossible!");
-    }
+    const weatherCondition = data.current.weather[0].main;
+    const backgroundImages = {
+        Clear: "url('./Assets/Images/sunny.jpeg')",
+        Rain: "url('./Assets/Images/rain.jpg')",
+        Snow: "url('./Assets/Images/snowfall.jpg')",
+        Clouds: "url('./Assets/Images/cloudy.jpg')",
+    };
+    document.body.style.backgroundImage = backgroundImages[weatherCondition] || "none";
+    document.body.style.backgroundSize = "cover";
     current_temp.innerHTML = `${data.current.temp} °C`;
     feels_like.innerHTML = `${data.current.feels_like} °C`;
     current_image.src = `${current_icon}`;
